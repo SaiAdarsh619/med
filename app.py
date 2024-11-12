@@ -3,14 +3,14 @@ import torch
 from torchvision import transforms
 from PIL import Image
 from io import BytesIO
-from medical_image_model.pth import YourModel  # Import your model class
+from medical_image_model.pth import model  # Import your model class
 
 # Initialize the Flask app
 app = Flask(__name__)
 
 # Load the trained model
 model = YourModel()  # Replace with your model class
-model.load_state_dict(torch.load('model.pth'))
+model.load_state_dict(torch.load('medical_image_model.pth.pth'))
 model.eval()
 
 # Define image transformations

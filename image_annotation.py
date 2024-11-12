@@ -10,7 +10,7 @@ model.load_state_dict(torch.load('medical_image_model.pth'))
 model.eval()
 
 # Prepare the image for inference
-image = cv2.imread('new_image.jpg')
+image = cv2.imread('00000003_004.png.jpg')
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Preprocess the image
